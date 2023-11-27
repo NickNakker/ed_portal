@@ -1,0 +1,37 @@
+{% extends 'portal/layout.html' %}
+
+
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+        {% for i in news %}
+        <div class="alert alert-light">
+            <h3>{{ i.title }}</h3>
+            <p>{{ i.text }}</p>
+            <span class="text-muted">Публикация: {{ i.date|date:"j, F, Y, время H:i:s" }}</span>
+            <p>Автор: {{ i.author }}</p>
+        </div>
+        {% endfor %}
+{% endblock %}
+
+{% block aside_block %}
+<h4 class="mt-2">Интересные статьи</h4>
+
+<img src="https://itproger.com/img/news/1591879929.jpg" class="img-thumbnail" srcset="">
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugit dolorum enim, 
+    aperiam eius obcaecati hic impedit amet, iusto quam, voluptate velit nobis recusandae neque! Dicta dolores nostrum libero animi?</p>
+
+<a href="#" class="href">
+    <a name="" id="" class="btn btn-primary" href="#" role="button">Посмотреть</a>
+</a>
+
+<img src="https://itproger.com/img/news/1589893627.jpg" class="img-thumbnail mt-4" srcset="">
+
+<p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veniam voluptatum quidem quibusdam, 
+    ut optio nemo harum odit rerum alias possimus deleniti culpa sint, non aliquam officia omnis laborum quam?</p>
+
+<a href="#" class="href">
+    <a name="" id="" class="btn btn-primary mt-4" href="#" role="button">Посмотреть</a>
+</a>
+
+{% endblock %}
